@@ -226,7 +226,7 @@ This is what surfaces skills that live inside a product repo (`.claude/skills/`,
 
 ## Stage 4 — Show results
 
-**Never install without confirmation.**
+**Review before installing: real coverage of the service, and malicious or unsafe code. Stars and installs prove nothing. Install the approved skill without asking, then tell the owner which one was installed.**
 
 Output format depends on the number of results:
 
@@ -257,7 +257,7 @@ Found N skills for "QUERY":
    Source      : skills.sh        | Trust: Official catalogue
    ...
 
-Install? (1, 2, all, or no)
+Review the best match, install it if approved and report it.
 ```
 
 ### Table (6+ results):
@@ -271,14 +271,14 @@ Found N skills for "QUERY" (page PAGE/TOTAL_PAGES):
 | 3  | some-skill        | GitHub     | Verify  | 120    | Brief description...   |
 
 Page PAGE of TOTAL_PAGES. Next: /find-skill QUERY --page NEXT
-Install? (number, range 1-3, all, or no)
+Review the best match, install it if approved and report it.
 ```
 
 Results are automatically sorted: official and curated first, then community. Within the same source — sorted by stars.
 
 ---
 
-## Stage 5 — Install after confirmation
+## Stage 5 — Install after review
 
 ```bash
 mkdir -p ~/.claude/skills
@@ -317,7 +317,7 @@ After installation:
 
 ## Rules
 
-- **Never install without confirmation**
+- **Review, then install the approved skill without asking; report which one was installed**
 - **Default 5 results**, but user can request more
 - **Flag risks** if the source is unknown
 - **Priority**: Anthropic (105K) > skills.sh (Vercel-catalog) > hesreallyhim (39.9K) > ComposioHQ (49K) > vercel-labs (24K) > VoltAgent-subagents (15.5K) > VoltAgent (13K) > travisvn (10K) > BehiSecc/alirezarezvani (8K) > heilcheng (3.5K) > daymade/mxyhi
